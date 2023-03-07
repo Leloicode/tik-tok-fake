@@ -1,0 +1,28 @@
+@import 'normalize.css';
+
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+:root{
+    --primary: #FE2C55;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'proxima-nova', sans-serif;
+    text-rendering: optimizeSpeed;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+.content{
+    width: 69.74%;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
