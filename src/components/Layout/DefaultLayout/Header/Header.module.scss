@@ -1,4 +1,7 @@
 :root{
+    --height-header: 60px;
+
+    --width-search: 350px;
     --height-search: 46px;
     --width-search-btn: 52px;
 }
@@ -6,9 +9,10 @@
 .wrapper{
     width: 100%;
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
-    height: 60px;
+    height: var(--height-header);
     display: flex;
     justify-content: center;
+   
 }
 
 .inner{
@@ -17,7 +21,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-right: 24px;
+    padding-left: 20px;
+    
 }
+
 .search{
     width: 350px;
     background-color: #f1f1f2;
@@ -28,6 +36,7 @@
     align-items: center;
     border: solid 1px transparent;
     position: relative;
+    margin-left: 180px;
     input{
         flex: 1;
         outline: none;
@@ -47,6 +56,17 @@
             border-color: var(--primary);
     }
     
+}
+.search-result{
+    width: var(--width-search);
+    .account-title{
+        height: 30px;
+        padding: 5px 12px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        color: rgba(22, 24, 35, 0.5);
+    }
 }
 .clear-btn,
 .loadding {
@@ -81,4 +101,23 @@
     &:active{
         background-color: rgba(22, 24, 35, .06);;
     }
+
+}
+
+
+.upload-btn{
+    padding: 4px 18px;
+}
+.header-option{
+    margin-left: 10px;
+    font-size: 20px;
+    // flex: 1;
+    cursor: pointer;
+}
+// .action button{
+//     margin-left: 16px;
+// }
+.toggle{
+    bottom: 4px;
+    left: 20px;
 }

@@ -1,6 +1,5 @@
 @import 'normalize.css';
-
-@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 :root{
     --primary: #FE2C55;
 }
@@ -13,7 +12,7 @@ html{
     font-size: 62.5%;
 }
 body{
-    font-family: 'proxima-nova', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     text-rendering: optimizeSpeed;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -25,4 +24,8 @@ button{
     outline: none;
     border: none;
     background-color: transparent;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

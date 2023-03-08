@@ -2,8 +2,37 @@ import React from 'react'
 import Styles from './Header.module.scss'
 import classNames from 'classnames/bind'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner,faMagnifyingGlass, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
+import Tippy from '@tippyjs/react/headless'; 
+
+import { faSpinner,faMagnifyingGlass, faCircleXmark,faPlus,faEllipsisVertical, faMoon,faAustralSign, faCircleQuestion, faKeyboard} from '@fortawesome/free-solid-svg-icons'
+import Proper from '../../../Proper';
+import AcountItem from '../../../AcountItem';
+import Button from '../../../Buttons';
+import Menu from '../../../Menu';
+import Toggle from '../../../Toggle';
 const cx = classNames.bind(Styles)
+
+
+const MENU_ITEMS = [
+    {
+        iconleft: <FontAwesomeIcon icon={faAustralSign}></FontAwesomeIcon>,
+        title: 'Tiếng việt',
+    },
+    {
+        iconleft: <FontAwesomeIcon icon={faCircleQuestion}></FontAwesomeIcon>,
+        title: 'Phản hồi và trợ giúp',
+        to: '/feedback'
+    },{
+        iconleft: <FontAwesomeIcon icon={faKeyboard}></FontAwesomeIcon>,
+        title: 'Phím tắt trên bàn phím',
+        href: 'https://fullstack.edu.vn',
+    },
+    {
+        iconleft: <FontAwesomeIcon icon={faMoon}></FontAwesomeIcon>,
+        title: 'Chế độ tối',
+        iconright: <Toggle className={cx('toggle')}/>
+    }
+]
 export default function Header() {
   return (
     <div className={cx('wrapper')}>
@@ -31,13 +60,45 @@ export default function Header() {
             </svg>
 
             </div>
-            <div className={cx('search')}>
-                <input placeholder='Tìm kiếm tài khoản và video' ></input>
-                <button className={cx('clear-btn')}><FontAwesomeIcon icon={faCircleXmark} ></FontAwesomeIcon></button> 
-                <button className={cx('loadding')} ><FontAwesomeIcon icon={faSpinner} ></FontAwesomeIcon></button>
-                <button className={cx('search-btn')} ><FontAwesomeIcon icon={faMagnifyingGlass} ></FontAwesomeIcon></button>
+            <Tippy
+                // visible={true}
+                // flipBehavior={["top"]}
+                interactive
+                render={attrs => (
+                <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                    <Proper>
+                        <h4 className={cx('account-title')}>Tài khoản</h4>
+                        <AcountItem ></AcountItem>
+                        <AcountItem ></AcountItem>
+                        <AcountItem ></AcountItem>
+                        <AcountItem ></AcountItem>
+                        <AcountItem ></AcountItem>
+                        
+
+
+                       
+                    </Proper>
+                </div>
+                )}
+            >
+                <div className={cx('search')}>
+                    <input placeholder='Tìm kiếm tài khoản và video' ></input>
+                    <button className={cx('clear-btn')}><FontAwesomeIcon icon={faCircleXmark} ></FontAwesomeIcon></button> 
+                    <button className={cx('loadding')} ><FontAwesomeIcon icon={faSpinner} ></FontAwesomeIcon></button>
+                    <button className={cx('search-btn')} ><FontAwesomeIcon icon={faMagnifyingGlass} ></FontAwesomeIcon></button>
+                </div>
+            </Tippy>
+            <div className={cx('action')}>
+                {/* css class 'padding' đe thay doi kich thuoc btn */}
+                <Button padding border hover leftIcon={<FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>}>
+                   <span className={cx('upload-title')}>Tải lên</span>
+                </Button>
+                <Button primary >Đăng nhập</Button>
+                <Menu datas = {MENU_ITEMS}>
+                    <button className={cx('header-option')}><FontAwesomeIcon icon={faEllipsisVertical} className={cx('header-option')}></FontAwesomeIcon></button>
+                </Menu>  
+
             </div>
-            <div className={cx('action')}></div>
             {/* search */}
         </div>
     </div>
