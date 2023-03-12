@@ -6,7 +6,7 @@ const cx = classNames.bind(Styles)
 export default function Sidebar() {
   return (
     <div className={cx('wrapper-sidebar')}>
-      <h2>Sidebar</h2>
+      <h2 className={cx('content')}>Sidebar</h2>
     </div>
   )
 }

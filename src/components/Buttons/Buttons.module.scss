@@ -1,7 +1,10 @@
+:root{
+    --height-btn: 36px;
+}
 .wrraper{
     font-size: 16px;
     width: auto;
-    height: 36px;
+    height: var(--height-btn);
     padding: 6px 6px;
     font-weight: 600;
     border: 1px solid transparent;
@@ -9,19 +12,31 @@
     border-radius: 4px;
     cursor: pointer;
     margin-left: 16px;
+    position: relative;
+    
     // hai nút đứng canh nhau cách trái 16px
     // + .wrraper{
     //     margin-left: 16px;
     // }
     .icon-left{
         margin-right: 10px;
+        
+        align-items: center;
+        justify-content: center;
     }
     .icon-left svg{
         width: 20px;
     }
     .icon-right{
         margin-left: 10px;
+        align-items: center;
+        justify-content: center;
     }
+    .custom svg{
+        font-size: 10px;
+        color: #10eb1b;
+    }
+    
     // background-color: var(--primary);
 }
 .primary{

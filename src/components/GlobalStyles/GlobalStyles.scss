@@ -1,7 +1,13 @@
 @import 'normalize.css';
-@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
 :root{
     --primary: #FE2C55;
+    --default-layout-horizontal-spacer: 24px;
+
+    
+      --height-header: 60px;
+    --width-search: 350px;
+    --height-search: 46px;
+    --width-search-btn: 52px;
 }
 *{
     box-sizing: border-box;
@@ -10,6 +16,23 @@
 }
 html{
     font-size: 62.5%;
+    &::-webkit-scrollbar-track
+    {
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar
+    {
+        width: 8px;
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        background-color: #f1f1f2;
+        border: 2px solid transparent;
+        border-radius: 20px;
+    }
 }
 body{
     font-family: 'Proxima Nova', sans-serif;

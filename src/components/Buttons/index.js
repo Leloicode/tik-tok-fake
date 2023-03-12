@@ -34,7 +34,7 @@ function Button({children , primary = false ,outline = false,small=false,padding
             <span className={cx('title-button')}>
                 {children}
             </span>
-            {rightIcon && <span className={cx('icon-right')}>
+            {rightIcon && <span className={cx('icon-right','custom')}>
                 {rightIcon} 
             </span>
             }   

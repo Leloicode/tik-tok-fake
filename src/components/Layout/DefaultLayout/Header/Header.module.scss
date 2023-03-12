@@ -1,10 +1,4 @@
-:root{
-    --height-header: 60px;
 
-    --width-search: 350px;
-    --height-search: 46px;
-    --width-search-btn: 52px;
-}
 
 .wrapper{
     width: 100%;
@@ -12,7 +6,9 @@
     height: var(--height-header);
     display: flex;
     justify-content: center;
-   
+    position: fixed;
+    background-color: #fff;
+    z-index: 777;
 }
 
 .inner{
@@ -21,88 +17,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 24px;
-    padding-left: 20px;
-    
+    padding: 0 var(--default-layout-horizontal-spacer);
 }
 
-.search{
-    width: 350px;
-    background-color: #f1f1f2;
-    height: var(--height-search);
-    border-radius: 92px;
-    padding-left: 16px;
-    display: flex;
-    align-items: center;
-    border: solid 1px transparent;
-    position: relative;
-    margin-left: 180px;
-    input{
-        flex: 1;
-        outline: none;
-        border: none;
-        background-color: transparent;
-        height: 100%;
-        caret-color:  rgb(254, 44, 85);
-        font-size: 16px;
-        font-family: "IBM Plex Sans", ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
-        &:not(:placeholder-shown) ~ .search-btn{
-            color: rgba(22, 24, 35, .75);
 
-        }
-        
-    }
-    &:focus-within{
-            border-color: var(--primary);
-    }
-    
-}
-.search-result{
-    width: var(--width-search);
-    .account-title{
-        height: 30px;
-        padding: 5px 12px;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 600;
-        color: rgba(22, 24, 35, 0.5);
-    }
-}
-.clear-btn,
-.loadding {
-    position: absolute;
-    right: calc(var(--width-search-btn) + 18px);
-    color: rgba(22, 24, 35, .34) ;
-    font-size: 18px;
-    cursor: pointer;
-}
-.search-btn {
-    width: var(--width-search-btn);
-    height: var(--height-search);
-    border-bottom-right-radius: 22px;
-    border-top-right-radius: 22px;
-    position: relative;
-    color: rgba(22, 24, 35, .34);
-    font-size: 2rem;
-    cursor: pointer;
-    &:hover{
-        background-color: rgba(22, 24, 35, .03);
-    }
-    &::before{
-        content: '';
-        position: absolute;
-        background-color: rgba(22, 24, 35, .12);
-        width: 1px;
-        height: calc(var(--height-search) - 18px);
-        left: 0;
-        right: 9px;
-        top: 9px;
-    }
-    &:active{
-        background-color: rgba(22, 24, 35, .06);;
-    }
-
-}
 
 
 .upload-btn{
@@ -114,10 +32,68 @@
     // flex: 1;
     cursor: pointer;
 }
-// .action button{
-//     margin-left: 16px;
-// }
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .avatar-user{
+        height: 32px;
+        width: 32px;
+        margin-left: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-top: 3px;
+    }
+    // margin-top: 2px;
+    .message{
+        position: relative;
+        .message-btn{
+            cursor: pointer;
+            margin-left: 16px;
+            margin-top: 3px;
+            
+        }
+        .notification-count{
+            position: absolute;
+            top: -7px;
+            right: -9px;
+            color: #fff;
+            min-width: 20px;
+            padding: 3px;
+            text-align: center;
+            border-radius: 20px;
+            font-weight: 700;
+            background-color: var(--primary);
+            font-size: 14px;
+
+        }
+        
+        
+    }
+    .mailbox{
+        position: relative;
+        .mailbox-btn{
+            cursor: pointer;
+            margin-left: 16px;
+            margin-top: 5px;
+        }
+        .notification-count{
+            position: absolute;
+            top: -2px;
+            right: -5px;
+            color: #fff;
+            min-width: 20px;
+            padding: 3px;
+            text-align: center;;
+            border-radius: 10px;
+            font-weight: 700;
+            background-color: var(--primary);
+            font-size: 14px;
+        }
+    }
+
+}
 .toggle{
-    bottom: 4px;
-    left: 20px;
+    bottom: 15%;
+    right: 8%;
 }

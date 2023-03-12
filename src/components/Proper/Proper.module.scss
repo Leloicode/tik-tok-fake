@@ -5,16 +5,35 @@
     box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
+    // overflow: auto;
     padding-top: 8px;
     padding-bottom: 8px;
 
     cursor: pointer;
+    &::-webkit-scrollbar-track
+    {
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar
+    {
+        width: 8px;
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb  
+    {
+        background-color: #f1f1f2;
+        border: 2px solid transparent;
+        border-radius: 20px;
+    }
     // overflow: auto;
     // mũi tên dropdown
     
     
 }
-// .arowdropdown{
+
+// .arow-dropdown{
 //     &::before{
 //         content: "";
 //         position: absolute;
@@ -30,15 +49,4 @@
 //         transform: rotate(-45deg);
 //     }
 // }
-// .top-left{
-//     &::before{
-//         top: -6px;
-//         left: 10%;
-//     }
-// }
-// .top-right{
-//     &::before{
-//         top: -6px;
-//         left: 90%;
-//     }
-// }
+
