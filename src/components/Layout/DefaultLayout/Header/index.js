@@ -171,7 +171,7 @@ const MENU_ITEMS_LOGIN = [
     ],
   },
 ];
-const currentUserLogin = false;
+const currentUserLogin = true;
 const srcAvatarUser =
   "https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/26a6db8d2748c7a6986134f5d915274c~c5_100x100.jpeg?x-expires=1678525200&x-signature=pr%2BR5bB1rwPB83Av81WDKWSfNTI%3D";
 const errorSrcImage =
@@ -269,7 +269,7 @@ export default function Header() {
             hover
             leftIcon={<FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>}
           >
-            <span className={cx("upload-title")}>Tải lên</span>
+            Tải lên
           </Button>
           {currentUserLogin ? (
             //nếu user đăng nhập
@@ -304,7 +304,7 @@ export default function Header() {
           <Menu
             className={currentUserLogin ?  cx('login') : ''}
             datas={currentUserLogin ? MENU_ITEMS_LOGIN : MENU_ITEMS_N0_LOGIN}
-            // className={currentUserLogin ? cx('login'): ''}
+          // className={currentUserLogin ? cx('login'): ''}
             clickItemMenuNoEvent={(item, level) =>
               clickItemMenuNoEvent(item, level)
             }

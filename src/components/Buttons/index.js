@@ -1,34 +1,41 @@
 import classNames from "classnames/bind";
 import styles from './Buttons.module.scss';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const cx = classNames.bind(styles);
-function Button({children , primary = false ,outline = false,small=false,padding,rightIcon, to ,border,hover,leftIcon, href , onClick , ...passprops}) {
+function Button({children , primary = false, navlink ,outline = false,small=false,padding,rightIcon, to ,border,hover,leftIcon, leftIcon1, href , onClick , ...passprops}) {
     const props = {
         onClick,
         ...passprops,
     }
     let Prom = 'button';
 
-    const classname = cx('wrraper',{
+    const classname = {
         padding: padding,
         primary: primary,
         outline: outline,
         small: small,
         border,
         hover
-    });
+    };
+    
     if (to) {
         props.to = to;
-        Prom = Link
+        if (navlink) {
+            Prom = NavLink
+            // classname.active = true;
+        }
+        else{
+            Prom = Link
+        }
     }else if (href){
         props.href = href;
         props.target = "_blank"
         Prom = 'a'
     }
     return ( 
-        <Prom className={classname} {...props} >
-            {leftIcon && <span className={cx('icon-left')}>
-                 {leftIcon}
+        <Prom className={cx('wrraper',classname)} {...props} >
+            {<span className={cx('icon-left')}>
+                 {leftIcon && leftIcon}{leftIcon1 && leftIcon1}
             </span>
             }
             <span className={cx('title-button')}>

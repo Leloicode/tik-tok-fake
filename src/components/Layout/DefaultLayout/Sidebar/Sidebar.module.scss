@@ -28,8 +28,48 @@
         border: 2px solid transparent;
         border-radius: 20px;
     }
+    // .menu-sidebar{
+    //     margin-left: -10px;
+    // }
+    .menu-sidebar button{
+        width: 100%;
+    }
+    svg{
+        margin-left: 10px;
+    }
+    .menu-sidebar button, a{
+        padding: 8px;
+        height: 48px;
+        margin-left: -10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .icon-home{
+        width: 32px;
+        height: 32px;
+    }
+    .active {
+        button, a{
+            color: var(--primary);
+        }
+        .icon{
+            display: none;
+        }
+        .icon-active{
+            display: block;
+        }
+        // svg{
+        //     color: var(--primary);
+        // }
+    }
+    .icon-active{
+        display: none;
+    }
+    .nav-link-sidebar{
+        padding: 0;
+        margin: 0;
+    }
 }
 .content{
     height: 1000px;
-
 }
