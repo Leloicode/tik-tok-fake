@@ -1,0 +1,157 @@
+.wrraper{
+    position: relative;
+    top: 0;
+    // display: flex;
+    left: 0;
+    height: calc(383.33333px + 8.68056vw);
+    .action-item{
+        position: absolute;
+        right: 50px;
+    }
+    .video-user{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        .img-video{
+            position: absolute;
+            // width: 100%;
+            border-radius: 8px;
+            height: 100%;
+            top: 10px;
+            left: 0;
+            // border-radius: 8px;
+        }
+
+        video{
+            height: 100%;
+            border-radius: 10px;
+            position: relative;
+            top: 10px;
+            left: 0;
+        }
+        .controls-video{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            .report-btn{
+                position: absolute;
+                color: white;
+                font-weight: 600;
+                top: 35px;
+                right: 25px;
+                cursor: pointer;
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s, opacity 0.5s linear;
+                span{
+                    margin-left: 10px;
+                }
+            }
+            .btn{
+                position: absolute;
+                left: 22px;
+                bottom: 25px;
+                visibility: hidden;
+                opacity: 0;
+                cursor: pointer;
+
+                transition: visibility 0s, opacity 0.5s linear;
+                // opacity: 0;
+            }
+            
+            .volume-control{
+                // display: none;
+                right: 12px;
+                bottom: 0px;
+                padding: 30px;
+                position: absolute;
+                width: auto;
+                // background-color: red;
+                // padding: 5px;
+                .custom-volume{
+                    // position: absolute;
+                    display: none;
+                    position: absolute;
+                    right: 0px;
+                    bottom: 80px;
+                    transform: rotate(-90deg);
+                    height: 24px;
+                    width: 68px;
+                    border-radius: 24px;
+                    background-color: rgba(22, 24, 35, 0.34);
+                }
+                .volum-btn{
+                        position: absolute;
+                        right: 22px;
+                        bottom: 22px;
+                        visibility: hidden;
+                        opacity: 0;
+                        cursor: pointer;
+                        transition: visibility 0s, opacity 0.5s linear;
+                        
+                    }
+                .input{
+                    background: #ff4500;
+                }
+                .range-control{
+                    -webkit-appearance: none;
+                    &::-webkit-slider-thumb{
+                        -webkit-appearance: none;
+                        width: 15px;
+                        height: 15px;
+                        background: #fff;
+                        border-radius: 50%;
+                    }
+                    width: 50px;
+                    height: 2px;
+                    margin-top: 11px;
+                    /* width: 100%; */
+                    display: flex;
+                    margin-left: 8px;
+                    background: #fff;                    
+                }
+
+            }
+            .volume-control:hover{
+                .custom-volume{
+                    display: block;
+                }
+            }
+            &:hover {
+                .volume-control{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .btn{
+                    visibility: visible;
+                    opacity: 1;
+                    // animation: showcontrols 0.5s ease;
+                    
+                }
+                .report-btn{
+                    // display: block;
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .volum-btn{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                @keyframes showcontrols{
+                    to{
+                        opacity: 0.8;
+                    }
+                    from{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}

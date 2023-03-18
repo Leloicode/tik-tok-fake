@@ -1,0 +1,86 @@
+:root{
+    --height-btn: 36px;
+}
+.wrraper{
+    font-size: 16px;
+    width: auto;
+    height: var(--height-btn);
+    // padding: 6px 6px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    color: black;
+    display: flex;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 16px;
+    position: relative;
+    
+    // hai nút đứng canh nhau cách trái 16px
+    // + .wrraper{
+    //     margin-left: 16px;
+    // }
+    .icon-left{
+        margin-right: 10px;
+        align-items: center;
+        justify-content: center;
+        line-height: 36px;
+    }
+    .icon-left svg{
+        min-width: 20px;
+    }
+    .icon-right{
+        margin-left: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .custom svg{
+        font-size: 10px;
+        color: #10eb1b;
+    }
+    .title-button{
+        justify-content: center;
+        align-items: center;
+        line-height: 36px;
+        // text-align: center;
+    }
+    
+    
+    // background-color: var(--primary);
+}
+.primary{
+    background-color: var(--primary);
+    color: #fff;
+    &:hover{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
+    }
+}
+.outline{
+    color: var(--primary);
+    border-color: currentColor;
+    &:hover{
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+.border{
+    border: 1px solid rgba(22, 24, 35, 0.12);
+}
+.small{
+    padding: 0 17px 10px 10px;
+    height: 28px;
+    .title-button{
+        font-weight: 600;
+        // height: 28px;
+        line-height: 28px;
+        justify-content: center;
+        align-items: center;
+        // padding: 0;
+    }
+}
+.padding{
+    padding: 0 18px;
+}
+.hover{
+    &:hover{
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}

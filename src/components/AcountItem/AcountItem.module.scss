@@ -1,0 +1,111 @@
+.wrapper{
+    // width: auto;
+    // height: auto;
+    margin: 0;
+    padding: 0;
+    // width: 50px;
+}
+.acounts{
+    display: flex;
+    padding: 10px;
+    padding-left: 15px;
+    height: 60px;
+    &:hover{
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+    img{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        line-height: 40px;
+    }
+    .info{
+        margin-left: 15px;
+        .name{
+            font-size: 16px;
+            font-weight: 600px;
+        }
+        .username{
+            font-size: 13px;
+            // padding-bottom: 0;
+            margin-top: 5px;
+            color: rgba(22, 24, 35, 0.5);;
+        }
+        .check{
+            color: rgb(32, 213, 236);
+            margin-left: 6px;
+        }
+    }
+    
+
+   
+}
+// info account
+.info-account{
+    width: 320px;
+    margin-right: 50px;
+    margin-top: -7px;
+    .account-detail{
+        padding: 15px 20px;
+        .account-name{
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .check{
+            color: rgb(32, 213, 236);
+            margin-left: 6px;
+        }
+        .account-nickname{
+            font-size: 14px;
+            display: block;
+            margin-top: 2px;
+            font-weight: 700;
+
+        }
+        .parameter{
+            margin-top: 10px;
+            .number-follow{
+                font-weight: 700;
+                font-size: 17px;
+                margin-right: 6px;
+            }
+            .title-follow{
+                color: rgba(22, 24, 35, 0.75);
+                margin-right: 12px;
+            }
+            .number-love{
+                font-weight: 700;
+                font-size: 17px;
+                margin-right: 6px;
+            }
+            .title-follow{
+                color: rgba(22, 24, 35, 0.75);
+                color: rgba(22, 24, 35, 0.75);
+
+            }
+        }
+    }
+    .info-header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        img{
+            width: 42px;
+            height: 42px;
+            border-radius: 42px;
+        }
+        button{
+            width: 106px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            span{
+                margin-right: 8px;
+            }
+        }
+    }
+   
+}

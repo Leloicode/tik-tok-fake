@@ -1,0 +1,54 @@
+@import 'normalize.css';
+:root{
+    --primary: #FE2C55;
+    --default-layout-horizontal-spacer: 24px;
+
+    
+      --height-header: 60px;
+    --width-search: 350px;
+    --height-search: 46px;
+    --width-search-btn: 52px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    &::-webkit-scrollbar-track
+    {
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar
+    {
+        width: 8px;
+        background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        background-color: #f1f1f2;
+        border: 2px solid transparent;
+        border-radius: 20px;
+    }
+}
+body{
+    font-family: 'Proxima Nova', sans-serif;
+    text-rendering: optimizeSpeed;
+    font-size: 1.6rem;
+    // line-height: 1.5;
+}
+.content{
+    width: 69.74%;
+}
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
