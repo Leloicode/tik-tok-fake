@@ -1,0 +1,76 @@
+.option{
+    margin-left: -30px;
+    margin-bottom: 5px;
+    position: relative;
+    .option-item{
+        max-height: 432px;
+        overflow: overlay;
+        &::-webkit-scrollbar-track
+        {
+            background-color: #fff;
+        }
+    
+        &::-webkit-scrollbar
+        {
+            width: 8px;
+            background-color: #fff;
+        }
+    
+        &::-webkit-scrollbar-thumb  
+        {
+            background-color: #f1f1f2;
+            border: 2px solid transparent;
+            border-radius: 20px;
+        }
+
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        left: 45px;
+        bottom: -8px;
+        width: 0;
+        height: 0;
+        box-shadow: 2px -2px 6px rgb(0 0 0 / 5%);
+        border-top: 8px solid #fff;
+        border-right: 8px solid #fff;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid transparent;
+        transform: rotate(135deg);
+    }
+    // width: 100%;
+    // padding: 0;
+    width: 300px;
+    button{
+        // display: block;
+        // padding-top:10px ;
+        // padding-bottom: 10px;
+        height: 48px;
+        width: 100%;
+        margin-left: 0;
+        
+        span{
+            line-height: 48px;
+            margin-left: 8px;
+            &:first-child{
+                margin-left: 20px;
+            }
+        }
+    }
+    .show-option {
+        // display: block;
+        text-align: center;
+        cursor: default;
+
+        .btn-arow{
+            height: 20px;
+            width: auto;
+            cursor: pointer;
+        }
+        svg{
+            width: 24px;
+            height: 24px;
+        }
+       
+    }
+}

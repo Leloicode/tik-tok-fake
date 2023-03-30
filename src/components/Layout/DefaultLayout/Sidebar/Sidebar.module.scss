@@ -11,6 +11,9 @@
     // height: 5000px;
     
     top: 0;
+    hr{
+        margin-right: 15px;
+    }
     &:hover{
         overflow: overlay;
         
@@ -110,7 +113,7 @@
         justify-content: center;
     }
 
-    .accounts-recommended p {
+    p {
         color: rgba(22, 24, 35, .75);;
         margin-bottom: 8px;
         font-size: 14px;
@@ -136,12 +139,7 @@
         }
     }
 
-    .accounts-follow p {
-        color: rgba(22, 24, 35, .75);;
-        margin-bottom: 8px;
-        font-size: 14px;
-        line-height: 20px;
-    }
+    
     .accounts-follow {
         .account-item {
             height: 48px;
@@ -159,6 +157,63 @@
             margin-top: 10px;
             cursor: pointer;
             font-weight: 700;
+        }
+    }
+    .discovers{
+        margin-right: 20px;
+        margin-bottom: 20px;
+        button{
+            margin-top: 10px;
+            display: inline-flex;
+            margin-left: 5px;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid rgba(22,24,35,.2);;
+            border-radius: 10px;
+            
+        }
+        button span:not(:first-child){
+            color: rgba(22,24,35,.75);
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-right: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+
+        }
+        span{
+            line-height: 23px;
+            margin-left: 3px;
+        }
+        svg{
+            width: 16px;
+            height: 16px;
+            
+        }
+        span:first-child{
+            // margin-right: 3px;
+            margin-left: 5px;
+            
+
+        }
+    }
+    .footer{
+        p{
+            font-size: 13px;
+        }
+        a{
+            color: inherit;
+            display: inline-block;
+            line-height: 17px;
+            margin: 5px 6px 0 0;
+            // font-size: 1.2rem;
+            font-size: 13px;
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
 }

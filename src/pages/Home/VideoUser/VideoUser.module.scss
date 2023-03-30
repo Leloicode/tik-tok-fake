@@ -10,7 +10,8 @@
         .info-video-account{
             display: flex;
             .avatar-user{
-                width: 56px;
+                max-width: 56px;
+                min-width: 56px;
                 height: 56px;
                 border-radius: 56px;
                 object-fit: cover;
@@ -67,4 +68,49 @@
             
         }
     }
+    .video-content{
+        display: flex;
+        width: 100%;
+        min-width: calc(383.33333px + 8.68056vw);
+        .player-video{
+            max-height: calc(383.33333px + 8.68056vw);
+            height: auto;
+        }
+        .interactive-space{
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            //label-heart
+            .interactive-item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 5px;
+                //button
+                .btn-heart{
+                    background-color: rgba(22,24,35,.06);
+                    border-radius: 48px;
+                    width: 48px;
+                    height: 48px;
+                    cursor: pointer;
+                    svg{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+                //strong
+                strong{
+                    color: var(--text-gray-color);
+                    font-size: 1.2rem;
+                    line-height: 17px;
+                    white-space: nowrap;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    
 }

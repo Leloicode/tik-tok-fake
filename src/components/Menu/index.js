@@ -1,4 +1,4 @@
-import {useState, React, useEffect ,memo } from 'react';
+import {useState, React ,memo } from 'react';
 import Styles from './Menu.module.scss'
 import classNames from 'classnames/bind'
 import Proper from '../Proper';

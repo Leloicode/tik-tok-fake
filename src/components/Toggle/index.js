@@ -1,6 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames/bind";
-import Button from "../Buttons";
 import Style  from './Toggle.module.scss'
 const cx = classNames.bind(Style);
 function Toggle({ className }) {

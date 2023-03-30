@@ -1,0 +1,51 @@
+.wrraper-container{
+    position: fixed;
+    background: rgb(0, 0, 0, 0.5);
+    inset: 0px;
+    z-index: 9999;
+
+    .wrraper{
+        
+        .content{
+            opacity: 1;
+            z-index: 1001;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 483px;
+            height: 80%;
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            .header{
+                position: relative;
+                display: flex;
+                button{
+                    position: absolute;
+
+                }
+                button:first-child{
+                    top: 20px;
+                }
+                button:last-child{
+                    right: 20px;
+                    top: 20px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 40px;
+                    background: rgba(22, 24, 35, 0.03);
+
+                }
+            }
+            .body{
+                padding-top: 50px;
+                width: 100%;
+                height: 88%;
+                max-height: 88%;
+            }
+            .footer{
+                height: 12%;
+            }
+        }
+    }
+}
+

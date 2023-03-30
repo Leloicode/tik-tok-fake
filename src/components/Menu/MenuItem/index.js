@@ -1,8 +1,5 @@
 import Button from "../../Buttons";
-import Styles from './MenuItem.module.scss'
-import classNames from "classnames/bind";
 import { memo } from "react";
-const cx = classNames.bind(Styles);
 function MenuItem({ item ,onClick,className}) {
     const props = {
 

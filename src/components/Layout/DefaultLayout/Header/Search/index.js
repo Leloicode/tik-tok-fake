@@ -10,10 +10,12 @@ import {
   faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
+import * as request from '../../../../../utils/request'
 import Styles from "./Search.module.scss";
 import classNames from "classnames/bind";
 const cx = classNames.bind(Styles);
+
+
 export default function SearchHeader() {
   const [searchValue, setSearchValue] = useState("");
   const inputElement = useRef();
@@ -54,21 +56,22 @@ export default function SearchHeader() {
       return;
     }
     setShowLoadding(true);
-    // fetch(``)
-    axios
-      .get("https://tiktok.fullstack.edu.vn/api/users/search", {
-        params: {
-          q: useDebounce,
-          type: "more",
-        },
-      })
-      .then((res) => {
-        setSearchResults(res.data.data);
+    const fetchApi = async () => {
+      try {
+        const res = await request.get("users/search", {
+          params: {
+            q: useDebounce,
+            type: "more",
+          },
+        })
+        setSearchResults(res.data);
         setShowLoadding(false);
-      })
-      .catch(() => {
-        setShowLoadding(false);
-      });
+      } catch (error) {
+        setShowLoadding(true);
+      }
+    }
+    fetchApi();
+    // eslint-disable-next-line
   }, [useDebounce]);
   return (
     <div>

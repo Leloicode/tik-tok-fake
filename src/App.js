@@ -1,8 +1,17 @@
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import { publicRoutes } from './routes'
-import { Fragment } from 'react'
+import { Fragment ,useEffect} from 'react'
+import Cookies from 'js-cookie';
+
 import DefaultLayout from './components/Layout/DefaultLayout';
 function App() {
+  useEffect(() => {
+    Cookies.set('myCookie', 'myValue', { 
+      sameSite: 'None',
+      secure: true 
+    });
+  }, []);
+
   return (
     <BrowserRouter>
       <div className="App">

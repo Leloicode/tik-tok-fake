@@ -35,6 +35,7 @@ function Button({children , primary = false, navlink ,className,outline = false,
     return ( 
         <Prom className={cx('wrraper',classname,className)} {...props} >
             {<span className={cx('icon-left')}>
+                
                  {leftIcon && leftIcon}{leftIcon1 && leftIcon1}
             </span>
             }

@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
@@ -6,10 +6,6 @@ import "tippy.js/dist/tippy.css";
 import {
   faPlus,
   faEllipsisVertical,
-  faMoon,
-  faAustralSign,
-  faCircleQuestion,
-  faKeyboard,
   faCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "../../../Buttons";
@@ -21,23 +17,10 @@ import classNames from "classnames/bind";
 import SearchHeader from "./Search";
 import { Link } from "react-router-dom";
 const cx = classNames.bind(Styles);
+// eslint-disable-next-line
 const DATA_LANGUAGES = [
   {
     title: "Tiếng anh",
-    // subItem: [
-    //   {
-    //     level: 3,
-    //     titleHeader: "Languages 2",
-    //     data: [
-    //       {
-    //         title: "Tiếng anh 2",
-    //       },
-    //       {
-    //         title: "Tiếng việt 2",
-    //       },
-    //     ],
-    //   },
-    // ],
   },
   {
     title: "Tiếng việt",
@@ -104,7 +87,7 @@ const DATA_LANGUAGES = [
   {
     title: "Tiếng việt",
   },
-
+// eslint-disable-next-line
 ]
 const MENU_ITEMS_N0_LOGIN = [
   {
@@ -138,6 +121,7 @@ const MENU_ITEMS_N0_LOGIN = [
       }, 
     ],
   },
+  // eslint-disable-next-line
 ];
 const MENU_ITEMS_LOGIN = [
   {
@@ -171,9 +155,9 @@ const MENU_ITEMS_LOGIN = [
     ],
   },
 ];
-const currentUserLogin = true;
+const currentUserLogin = false;
 const srcAvatarUser =
-  "https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/26a6db8d2748c7a6986134f5d915274c~c5_100x100.jpeg?x-expires=1679151600&x-signature=hL3GZKRXqAUCbVHslNJRxCcAkH4%3D";
+  "https://files.fullstack.edu.vn/f8-tiktok/users/5203/63ff59bb3332a.png";
 const errorSrcImage =
   "https://us.123rf.com/450wm/tkacchuk/tkacchuk2004/tkacchuk200400017/143745488-no-picture-icon-editable-line-vector-no-image-no-photo-available-or-no-picture-for-your-website-or-m.jpg?ver=6";
 export default function Header() {
@@ -298,7 +282,7 @@ export default function Header() {
           ) : (
             //nếu user chưa đăng nhập
             <>
-              <Button primary>Đăng nhập</Button>
+              <Button primary className={cx('btn-login')} >Đăng nhập</Button>
             </>
           )}
           <Menu

@@ -10,38 +10,38 @@
     border: 1px solid transparent;
     color: black;
     display: flex;
+    
     border-radius: 4px;
     cursor: pointer;
     margin-left: 16px;
     position: relative;
-    
+    align-items: center;
     // hai nút đứng canh nhau cách trái 16px
     // + .wrraper{
     //     margin-left: 16px;
     // }
     .icon-left{
-        margin-right: 10px;
+        display: flex;
         align-items: center;
         justify-content: center;
-        line-height: 36px;
+    }
+    .title-button{
+        margin-left: 8px;
+        margin-right: 8px;
+        
     }
     .icon-left svg{
         min-width: 20px;
+        
     }
     .icon-right{
-        margin-left: 10px;
+    
         align-items: center;
         justify-content: center;
     }
     .custom svg{
         font-size: 10px;
         color: #10eb1b;
-    }
-    .title-button{
-        justify-content: center;
-        align-items: center;
-        line-height: 36px;
-        // text-align: center;
     }
     
     
@@ -65,19 +65,15 @@
     border: 1px solid rgba(22, 24, 35, 0.12);
 }
 .small{
-    padding: 0 17px 10px 10px;
     height: 28px;
     .title-button{
         font-weight: 600;
-        // height: 28px;
-        line-height: 28px;
-        justify-content: center;
-        align-items: center;
-        // padding: 0;
+        
     }
 }
 .padding{
-    padding: 0 18px;
+    padding-left: 18px;
+    padding-right: 10px;
 }
 .hover{
     &:hover{
